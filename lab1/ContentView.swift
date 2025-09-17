@@ -17,14 +17,38 @@ var dogDict = Dictionary(uniqueKeysWithValues: zip(dogNames, dogDescriptions));
 
 
 struct ContentView: View {
+    
+    @State  private var dog = "Airedale Terrier"
+    
     var body: some View {
+        Text("Tap on dog to see description!")
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            HStack{
+                Image("Airedale Terrier").resizable().scaledToFit().onTapGesture{ dog = "Airedale Terrier"}
+                Image("American Foxhound").resizable().scaledToFit().onTapGesture{dog = "American Foxhound"}
+                Image("Dutch Shepherd").resizable().scaledToFit( ).onTapGesture{dog = "Dutch Shepherd"}
+            }
+            HStack{
+                Image("Havanese").resizable().scaledToFit().onTapGesture{dog="Havanese"}
+                Image("Leonberger").resizable().scaledToFit().onTapGesture{dog="Leonberger"}
+                Image("Mudi").resizable().scaledToFit().onTapGesture{dog = "Mudi"}
+            }
+            HStack{
+                Image("Norwegian Lundehund").resizable().scaledToFit().onTapGesture{dog="Norwegian Lundehund"}
+                Image("Pharaoh Hound").resizable().scaledToFit().onTapGesture{dog="Pharaoh Hound"}
+                Image("Scottish Terrier").resizable().scaledToFit( ).onTapGesture{dog="Scottish Terrier"}
+            }
+            HStack{
+                Image("Tosa").resizable().scaledToFit().onTapGesture{dog="Tosa"}
+                Image("").resizable().scaledToFit()
+                Image("").resizable().scaledToFit()
+            }
+            
         }
         .padding()
+
+        Text(dogDict[dog]!)
+        Spacer()
     }
 }
 
