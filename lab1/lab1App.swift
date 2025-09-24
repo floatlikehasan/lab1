@@ -2,7 +2,7 @@
 //  lab1App.swift
 //  lab1
 //
-//  Created by Alejandro Avina on 9/15/25.
+//  Created by Alejandro Avina and Hasan Dababo on 9/15/25.
 //
 
 import SwiftUI
